@@ -31,13 +31,13 @@ class EditPost extends Component {
                 <h2>Edit Post</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <input type="text" name="title" className="form-control" id="postTitle" onChange={this.handleOnChange} value={this.state.title} placeholder="Post Title" />
+                        <input type="text" name="title" className="form-control" id="postTitle" onChange={this.handleOnChange} value={ typeof this.state.title === 'undefined' ? '' : this.state.title } placeholder="Post Title" />
                     </div>
                     <div className="form-group">
-                        <input type="text" name="excerpt" className="form-control" id="postExcerpt" onChange={this.handleOnChange} value={this.state.excerpt} placeholder="Post Excerpt" />
+                        <input type="text" name="excerpt" className="form-control" id="postExcerpt" onChange={this.handleOnChange} value={ typeof this.state.excerpt === 'undefined' ? '' : this.state.excerpt } placeholder="Post Excerpt" />
                     </div>
                     <div className="form-group">
-                        <textarea name="body" className="form-control" id="postBody" placeholder="Post Body" onChange={this.handleOnChange} value={this.state.body} />
+                        <textarea name="body" className="form-control" id="postBody" placeholder="Post Body" onChange={this.handleOnChange} value={ typeof this.state.body === 'undefined' ? '' : this.state.body } />
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
