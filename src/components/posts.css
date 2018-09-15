@@ -1,0 +1,9 @@
+a.posts-link {
+    color: #f64747;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+a.posts-link:hover {
+    color: #96281b;
+}
